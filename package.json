@@ -1,0 +1,16 @@
+{
+    "name": "Pawn vs Hero",
+    "version": "1.0.0",
+    "description": "A chess-like game with WebSocket communication.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.1",
+      "ws": "^8.8.0"
+    },
+    "author": "POTHURI NAGA SAI SAKETH",
+    "license": "VIT-AP"
+  }
+  

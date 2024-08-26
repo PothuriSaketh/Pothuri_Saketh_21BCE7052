@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess-like Game with Custom Deployment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="current-turn">
+            <h3>Current Turn: <span id="player-turn">Player 1 (Red)</span></h3>
+        </div>
+
+        <div id="deployment-input">
+            <input type="text" id="player1-deployment" placeholder="Player 1 Deployment (e.g., p1,h1,p2,h2,p3)">
+            <input type="text" id="player2-deployment" placeholder="Player 2 Deployment (e.g., h1,p1,h2,p2,h3)">
+            <button id="deploy-btn" onclick="deployCharacters()">Deploy</button>
+        </div>
+
+        <div id="game-board"></div>
+
+        <div id="move-options"></div>
+        <div id="game-over-screen">
+            <h2>Game Over!</h2>
+            <p id="winner"></p>
+            <button onclick="startNewGame()">Start New Game</button>
+        </div>
+        <div id="move-log">
+            <h4>Move History:</h4>
+            <div id="log-container" style="display: flex; flex-wrap: wrap;"></div>
+        </div>
+        
+
+        
+        <div id="deleted-characters">
+            <h4>Deleted Characters:</h4>
+            <ul id="deleted-list"></ul>
+        </div>
+        
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
+
+
+

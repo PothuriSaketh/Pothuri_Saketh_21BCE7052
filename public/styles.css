@@ -1,0 +1,142 @@
+body {
+    background-color: #6a6a6a; /* or background-color: black; */
+}
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    grid-template-rows: repeat(5, 60px);
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #413e3e;
+}
+
+.character {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.player1 { color: #ff0000; }
+.player2 { color: #0000ff; }
+
+#move-options {
+    margin-top: 20px;
+}
+
+.move-btn {
+    padding: 10px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.move-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#move-log {
+    margin-top: 20px;
+}
+
+#game-over-screen {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#deployment-input {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#deployment-input input {
+    width: 300px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#deploy-btn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#deploy-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#deleted-characters {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#deleted-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#deleted-list li {
+    font-size: 16px;
+    color: #ffffff;
+}
+.selected {
+    animation: pulse 0.5s ease-out;
+}
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(66, 133, 244, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+    }
+}
+
+.player1.selected {
+    background-color: #ffcccc; /* light red */
+}
+
+.player2.selected {
+    background-color: #add8e6; /* light blue */
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0.7);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(66, 133, 244, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
+    }
+}
